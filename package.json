@@ -1,0 +1,24 @@
+{
+  "name": "vtracker3",
+  "version": "0.0.1",
+  "description": "The Assetto Corsa metaverse tracker",
+  "scripts": {
+    "frontend": "cd frontend && npm start",
+    "backend": "cd backend\\config\\ && nodemon server.js",
+    "development": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattiadevigus/vtracker3.git"
+  },
+  "author": "Mattia Devigus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattiadevigus/vtracker3/issues"
+  },
+  "homepage": "https://github.com/mattiadevigus/vtracker3#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  }
+}

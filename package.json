@@ -4,7 +4,7 @@
   "description": "The Assetto Corsa metaverse tracker",
   "scripts": {
     "frontend": "cd frontend && npm start",
-    "backend": "cd backend\\config\\ && nodemon server.js",
+    "backend": "cd backend/config/ && nodemon server.js",
     "development": ""
   },
   "repository": {

@@ -7,6 +7,11 @@
     justify-content: center;
 }
 
+.homepage h3 {
+    padding: 3rem;
+    border: 3px dashed var(--light-mode-bg);
+}
+
 .homepage button {
     position: absolute;
     margin: 0 auto;

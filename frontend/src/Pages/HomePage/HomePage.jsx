@@ -4,6 +4,10 @@ import './HomePage.css';
 //Mui
 import { Button, Typography, Fade } from '@mui/material';
 
+//FA
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCirclePlay } from '@fortawesome/free-solid-svg-icons'
+
 class HomePage extends Component {
     render = () => {
         return (
@@ -13,7 +17,7 @@ class HomePage extends Component {
                 </Fade>
 
                 <Button variant="contained" size="large">
-                    Start
+                    <FontAwesomeIcon icon={faCirclePlay}/>  Avvia
                 </Button>
             </section>
         )

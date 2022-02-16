@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Servers",
+        "icon": "fa-server",
+        "link": "/servers"
+    },
+    {
+        "id": 2,
+        "title": "Drivers",
+        "icon": "fa-users",
+        "link": "/drivers"
+    },
+    {
+        "id": 3,
+        "title": "About me",
+        "icon": "fa-address-card",
+        "link": "/drivers"
+    }
+]

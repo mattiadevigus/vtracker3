@@ -2,7 +2,7 @@ import { Component } from 'react';
 import './HomePage.css';
 
 //Mui
-import { Button, Typography, Fade } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 
 //FA
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,15 +11,20 @@ import { faCirclePlay } from '@fortawesome/free-solid-svg-icons'
 class HomePage extends Component {
     render = () => {
         return (
-            <section className="homepage">
-                <Fade in={true}>
-                    <Typography variant="h3">LOGO GOES HERE</Typography>
-                </Fade>
+            <div>
+                <div className="background-animation"></div>
+                <div className="background-animation bg2"></div>
+                <div className="background-animation bg3"></div>
+                <section className="homepage">
 
-                <Button variant="contained" size="large">
-                    <FontAwesomeIcon icon={faCirclePlay}/>  Avvia
-                </Button>
-            </section>
+                    <img src="/img/vt_logo.png" alt='vt_logo' />
+                    <Typography variant="span">"Frase che cambia ogni secondo"</Typography>
+
+                    <Button variant="contained" size="large">
+                        <FontAwesomeIcon icon={faCirclePlay} />  Avvia
+                    </Button>
+                </section>
+            </div>
         )
     }
 }

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './Navbar.css';
+import './Screen.css';
 import pages from './pages.json'
 
 //Mui
@@ -13,7 +14,7 @@ import { faServer, faUsers, faAddressCard } from "@fortawesome/free-solid-svg-ic
 
 library.add(faServer, faUsers, faAddressCard);
 
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Admin Area'];
 
 export default function Navbar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -77,7 +78,7 @@ export default function Navbar() {
                     >
                         {pages.map((page) => (
                             <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">{}</Typography>
+                                <Typography textAlign="center">{page.title}</Typography>
                             </MenuItem>
                         ))}
                     </Menu>
@@ -92,20 +93,23 @@ export default function Navbar() {
                 </Typography>
                 <Box sx={{ flexGrow: 1, justifyContent: 'center', display: { xs: 'none', md: 'flex' } }}>
                     {pages.map((page) => (
-                        <Button
-                            key={page.id}
-                            onClick={handleCloseNavMenu}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                        >
-                            <FontAwesomeIcon icon={page.icon} />
-                        </Button>
+                        <Tooltip title={page.title}>
+                            <Button
+                                key={page.id}
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+
+                                <FontAwesomeIcon icon={page.icon} />
+                            </Button>
+                        </Tooltip>
                     ))}
                 </Box>
 
                 <Box sx={{ flexGrow: 0 }}>
                     <Tooltip title="Open settings">
                         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                            <Avatar alt="Mattia" src="/static/images/avatar/2.jpg" />
+                            <Avatar src="/static/images/avatar/2.jpg" />
                         </IconButton>
                     </Tooltip>
                     <Menu

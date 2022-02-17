@@ -7,6 +7,7 @@
   --light-mode-txt: #000000;
   --dark-mode-bg: #17171d;
   --dark-mode-txt: #fafafa;
+  --dark-mode-txt-op: #7a7a7a;
   --vt-primary: #7a1212;
   --vt-primary-hv: #990000;
 }
@@ -21,4 +22,34 @@ body {
   color: var(--dark-mode-txt);
   font-family: "Roboto Serif", sans-serif !important;
   font-family: "Varela", sans-serif;
+}
+
+.background-animation {
+  animation: slide 5s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #222235 50%, #15151e 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
 }

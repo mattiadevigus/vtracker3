@@ -4,3 +4,7 @@
     padding-right: 10rem;
     margin: 0 auto;
 }
+
+.navbar a {
+    text-align: center;
+}

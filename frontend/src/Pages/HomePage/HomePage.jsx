@@ -6,9 +6,12 @@ import { Button, Typography } from '@mui/material';
 
 //FA
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCirclePlay } from '@fortawesome/free-solid-svg-icons'
+import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
+
+const mentions = ["tews", "test2"]
 
 class HomePage extends Component {
+
     render = () => {
         return (
             <div>
@@ -17,8 +20,8 @@ class HomePage extends Component {
                 <div className="background-animation bg3"></div>
                 <section className="homepage">
 
-                    <img src="/img/vt_logo.png" alt='vt_logo' />
-                    <Typography variant="span">"Frase che cambia ogni secondo"</Typography>
+                    <img className="logo-1" src="/img/vt_logo.png" alt='vt_logo' />
+                    <Typography id="mention" variant="span"></Typography>
 
                     <Button variant="contained" size="large">
                         <FontAwesomeIcon icon={faCirclePlay} />  Avvia

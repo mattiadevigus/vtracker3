@@ -96,10 +96,10 @@ export default function Navbar() {
                         <Tooltip title={page.title}>
                             <Button
                                 key={page.id}
+                                href={page.link}
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-
                                 <FontAwesomeIcon icon={page.icon} />
                             </Button>
                         </Tooltip>

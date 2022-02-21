@@ -13,8 +13,8 @@
 }
 
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -22,6 +22,20 @@ body {
   color: var(--dark-mode-txt);
   font-family: "Roboto Serif", sans-serif !important;
   font-family: "Varela", sans-serif;
+}
+
+section {
+  margin-top: 5rem;
+}
+
+.logo-1 {
+  width: 2rem;
+  margin: 1rem;
+}
+
+.logo-2 {
+  width: 5rem;
+  margin: 2rem;
 }
 
 .background-animation {

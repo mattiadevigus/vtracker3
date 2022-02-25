@@ -8,15 +8,6 @@
   justify-content: center;
 }
 
-.homepage img {
-    width: 5rem;
-    margin: 2rem;
-}
-
-.homepage span {
-    color: var(--dark-mode-txt-op);
-}
-
 .homepage button {
   position: absolute;
   margin: 0 auto;

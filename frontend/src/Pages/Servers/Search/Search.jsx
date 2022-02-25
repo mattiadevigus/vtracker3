@@ -1,31 +1,52 @@
 import { Component } from 'react';
 import './Search.css';
 
-import { TextField, InputAdornment, IconButton } from '@mui/material';
+import { Box, FormControl, TextField, InputAdornment, FormHelperText, Link } from '@mui/material';
 
-import SearchIcon from '@mui/icons-material/Search';
 
 class Search extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            searchValue: "#"
+        }
+    }
+
     render = () => {
         return (
-            <TextField
-                label="Search..."
-                variant="standard"
-                InputProps={{
-                    style: {
-                        color: "white",
-                        borderColor: "white"
-                    },
-                    endAdornment: (
-                        <InputAdornment>
-                            <IconButton>
-                                <SearchIcon />
-                            </IconButton>
-                        </InputAdornment>
-                    )
-                }}
-            />
-
+            <Box component="form">
+                <FormControl fullWidth>
+                    <TextField
+                        className="search"
+                        variant="filled"
+                        fullWidth
+                        label="Search Server's Tag"
+                        color='primary'
+                        value={this.state.value}
+                        InputProps={{
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                    #
+                                </InputAdornment>
+                            ),
+                            /* endAdornment: (
+                                <InputAdornment>
+                                    <IconButton>
+                                        <SearchIcon style={{ color: "white" }} />
+                                    </IconButton>
+                                </InputAdornment>
+                            ) */
+                        }}
+                    />
+                    <FormHelperText sx={{ textAlign: "right" }}>
+                        <Link underline="none" href="/help">
+                            Need help?
+                        </Link>
+                    </FormHelperText>
+                </FormControl>
+            </Box>
         )
     }
 }

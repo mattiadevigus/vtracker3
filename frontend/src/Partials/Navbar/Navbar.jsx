@@ -3,6 +3,8 @@ import './Navbar.css';
 import './Screen.css';
 import pages from './pages.json'
 
+import { Link } from 'react-router-dom';
+
 //Mui
 import { AppBar, Box, Toolbar, Menu, MenuItem, Typography, Button, Tooltip, Avatar, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -10,9 +12,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 //FA
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faServer, faUsers, faAddressCard } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faServer, faUsers, faAddressCard } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faServer, faUsers, faAddressCard);
+library.add(faHome, faServer, faUsers, faAddressCard);
 
 const settings = ['Admin Area'];
 
@@ -36,7 +38,7 @@ export default function Navbar() {
     };
 
     return (
-        <AppBar className="navbar" position="fixed">
+        <AppBar className="navbar" color="primary" position="fixed">
             <Toolbar disableGutters>
                 <Typography
                     variant="h6"
@@ -78,7 +80,7 @@ export default function Navbar() {
                     >
                         {pages.map((page) => (
                             <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">{page.title}</Typography>
+                                <Typography color="black">{page.title}</Typography>
                             </MenuItem>
                         ))}
                     </Menu>

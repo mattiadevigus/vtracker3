@@ -20,7 +20,7 @@ class HomePage extends Component {
                 <div className="background-animation bg3"></div>
                 <section className="homepage">
 
-                    <img className="logo-1" src="/img/vt_logo.png" alt='vt_logo' />
+                    <img className="logo-2" src="/img/vt_logo.png" alt='vt_logo' />
                     <Typography id="mention" variant="span"></Typography>
 
                     <Button variant="contained" size="large">

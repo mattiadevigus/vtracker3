@@ -1,18 +1,24 @@
 [
     {
         "id": 1,
+        "title": "Home",
+        "icon": "fa-home",
+        "link": "/"
+    },
+    {
+        "id": 2,
         "title": "Servers",
         "icon": "fa-server",
         "link": "/servers"
     },
     {
-        "id": 2,
+        "id": 3,
         "title": "Drivers",
         "icon": "fa-users",
         "link": "/drivers"
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "About me",
         "icon": "fa-address-card",
         "link": "/drivers"

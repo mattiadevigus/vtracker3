@@ -1,13 +1,6 @@
 /* Qui viene caricato lo stile per elementi base */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif&family=Varela&display=swap");
-
 :root {
-  --light-mode-bg: #fafafa;
-  --light-mode-txt: #000000;
-  --dark-mode-bg: #17171d;
-  --dark-mode-txt: #fafafa;
-  --dark-mode-txt-op: #7a7a7a;
   --vt-primary: #7a1212;
   --vt-primary-hv: #990000;
 }
@@ -15,13 +8,6 @@
 * {
   margin: 0;
   box-sizing: border-box;
-}
-
-body {
-  background: var(--dark-mode-bg);
-  color: var(--dark-mode-txt);
-  font-family: "Roboto Serif", sans-serif !important;
-  font-family: "Varela", sans-serif;
 }
 
 section {

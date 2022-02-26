@@ -1,0 +1,8 @@
+thead tr th{
+    background-color: #7a1212 !important;
+    color: white !important;
+}
+
+tbody tr td{
+    border-bottom: none !important;
+}

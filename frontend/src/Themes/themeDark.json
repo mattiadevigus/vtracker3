@@ -4,7 +4,8 @@
             "main": "#7a1212"
         },
         "background": {
-            "default": "#17171d"
+            "default": "#17171d",
+            "paper": "#26262e"
         },
         "text": {
             "primary": "#dedede",

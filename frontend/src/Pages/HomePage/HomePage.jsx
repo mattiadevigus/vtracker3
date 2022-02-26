@@ -23,7 +23,7 @@ class HomePage extends Component {
                     <img className="logo-2" src="/img/vt_logo.png" alt='vt_logo' />
                     <Typography id="mention" variant="span"></Typography>
 
-                    <Button variant="contained" size="large">
+                    <Button href="/servers" variant="contained" size="large">
                         <FontAwesomeIcon icon={faCirclePlay} />  Avvia
                     </Button>
                 </section>

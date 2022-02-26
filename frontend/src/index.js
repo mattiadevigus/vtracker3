@@ -10,6 +10,7 @@ import { CssBaseline } from "@mui/material";
 import Navbar from './Partials/Navbar/Navbar';
 import HomePage from './Pages/HomePage/HomePage';
 import Servers from './Pages/Servers/Servers';
+import ServersDetail from './Pages/ServerDetail/ServerDetail';
 
 // Temi
 import styleLight from './Themes/themeLight.json';
@@ -28,6 +29,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/servers" element={<Servers />} />
+          <Route path="/servers/:tag" element={<ServersDetail />} />
         </Routes>
       </Router>
     </CssBaseline>

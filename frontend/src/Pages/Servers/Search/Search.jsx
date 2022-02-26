@@ -21,6 +21,7 @@ class Search extends Component {
                     <TextField
                         className="search"
                         variant="filled"
+                        type="tel"
                         fullWidth
                         label="Search Server's Tag"
                         color='primary'
@@ -30,14 +31,7 @@ class Search extends Component {
                                 <InputAdornment position="start">
                                     #
                                 </InputAdornment>
-                            ),
-                            /* endAdornment: (
-                                <InputAdornment>
-                                    <IconButton>
-                                        <SearchIcon style={{ color: "white" }} />
-                                    </IconButton>
-                                </InputAdornment>
-                            ) */
+                            )
                         }}
                     />
                     <FormHelperText sx={{ textAlign: "right" }}>

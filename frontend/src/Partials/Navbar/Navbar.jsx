@@ -5,11 +5,9 @@ import pages from './pages.json'
 
 import { Link } from 'react-router-dom';
 
-//Mui
 import { AppBar, Box, Toolbar, Menu, MenuItem, Typography, Button, Tooltip, Avatar, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
-//FA
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faHome, faServer, faUsers, faAddressCard } from "@fortawesome/free-solid-svg-icons";

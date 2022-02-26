@@ -8,13 +8,8 @@
   justify-content: center;
 }
 
-.homepage button {
+.homepage a {
   position: absolute;
   margin: 0 auto;
   bottom: 2rem;
-  background: var(--vt-primary);
-}
-
-.homepage button:hover {
-  background-color: var(--vt-primary-hv);
 }

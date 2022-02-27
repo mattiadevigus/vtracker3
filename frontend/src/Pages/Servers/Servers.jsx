@@ -11,7 +11,7 @@ class Servers extends Component {
         return (
             <section className="servers">
                 <Container>
-                    <Search sx={{ marginBottom: "1rem" }}/>
+                    <Search />
                     <Box>
                         <Grid container spacing={2}>
                             <Grid item xs={12} md={4}>

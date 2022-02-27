@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import './Search.css';
 
 import { Box, FormControl, TextField, InputAdornment, FormHelperText, Link } from '@mui/material';
 
@@ -19,7 +18,6 @@ class Search extends Component {
             <Box component="form">
                 <FormControl fullWidth>
                     <TextField
-                        className="search"
                         variant="filled"
                         type="tel"
                         fullWidth
@@ -34,7 +32,7 @@ class Search extends Component {
                             )
                         }}
                     />
-                    <FormHelperText sx={{ textAlign: "right" }}>
+                    <FormHelperText sx={{ textAlign: "right", marginBottom: "1rem" }}>
                         <Link underline="none" href="/help">
                             Need help?
                         </Link>

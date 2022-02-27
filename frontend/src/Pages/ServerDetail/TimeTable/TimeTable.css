@@ -3,6 +3,10 @@ thead tr th{
     color: white !important;
 }
 
+tbody tr{
+    cursor: pointer;
+}
+
 tbody tr td{
     border-bottom: none !important;
 }

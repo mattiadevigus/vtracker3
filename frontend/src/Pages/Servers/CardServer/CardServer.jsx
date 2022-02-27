@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import { Card, CardHeader, CardContent, CardActions, Collapse, Typography, Button, IconButton } from '@mui/material';
+import { Card, CardHeader, CardContent, CardActions, Grid, Collapse, Typography, Button, IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -35,6 +35,20 @@ class CardServer extends Component {
                 <CardHeader title="Server di Test" subheader="#8666" action={
                     <Typography variant="h6" color="primary">{this.props.pro}</Typography>
                 } />
+                <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
+                    <CardContent>
+                        <Grid container>
+                            <Grid item xs={4}>
+                                <img style={{ width: "4rem" }} src="/img/tracks/spa.png" alt="SPA" />
+                            </Grid>
+                            <Grid item xs={8}>
+                                <Typography>Track: Spa</Typography>
+                                <Typography color="purple">BestTime: 1:21:293</Typography>
+                                <Typography>Driver: 32</Typography>
+                            </Grid>
+                        </Grid>
+                    </CardContent>
+                </Collapse>
                 <CardActions disableSpacing>
                     <Button href="/servers/98" variant="contained">Open</Button>
                     <ExpandMore
@@ -46,12 +60,7 @@ class CardServer extends Component {
                         <ExpandMoreIcon style={{ textAlign: "right", color: "white" }} />
                     </ExpandMore>
                 </CardActions>
-                <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-                    <CardContent>
-                        <Typography>Track: Spa</Typography>
-                        <Typography color="purple">BestTime: 1:21:293 (Drivername)</Typography>
-                    </CardContent>
-                </Collapse>
+
             </Card>
         )
     }

@@ -7,6 +7,7 @@ import Search from './Search/Search';
 import CardServer from './CardServer/CardServer';
 
 class Servers extends Component {
+    
     render = () => {
         return (
             <section className="servers">

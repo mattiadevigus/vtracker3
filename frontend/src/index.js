@@ -14,6 +14,10 @@ import HomePage from './Pages/HomePage/HomePage';
 import Servers from './Pages/Servers/Servers';
 import ServersDetail from './Pages/ServerDetail/ServerDetail';
 
+// Import Componenti Privati
+import BottomNavbar from './Partials/BottomNavbar/BottomNavbar';
+import Dashboard from './Private/Dashboard/Dashboard';
+
 // Temi
 import styleLight from './Themes/themeLight.json';
 import styleDark from './Themes/themeDark.json';
@@ -29,8 +33,13 @@ class App extends Component {
     this.state = {
       light: Boolean(localStorage.getItem("light")) == null ?
         (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? false : true) :
-        JSON.parse(localStorage.getItem("light"))
+        JSON.parse(localStorage.getItem("light")),
+      hideNavbar: false
     }
+  }
+
+  componentDidMount = () => {
+    if (window.location.href.includes("/private")) this.setState({ hideNavbar: true })
   }
 
   handleTheme = () => {
@@ -42,7 +51,7 @@ class App extends Component {
   render = () => {
     return (
       <ThemeProvider theme={this.state.light ? themeLight : themeDark}>
-        <Navbar />
+        {!this.state.hideNavbar ? <Navbar /> : <BottomNavbar />}
         <SpeedDial
           ariaLabel="Theme"
           sx={{ position: 'fixed', bottom: 16, right: 16 }}
@@ -55,6 +64,7 @@ class App extends Component {
               <Route path="/" element={<HomePage />} />
               <Route path="/servers" element={<Servers />} />
               <Route path="/servers/:tag" element={<ServersDetail />} />
+              <Route path="/private/dashboard" element={<Dashboard />} />
             </Routes>
           </Router>
         </CssBaseline>

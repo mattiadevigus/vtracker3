@@ -1,0 +1,17 @@
+[
+    {
+        "label": "Home",
+        "icon": "fa-home",
+        "link": "/private/dashboard"
+    },
+    {
+        "label": "Profile",
+        "icon": "fa-home",
+        "link": "/private/dashboard/profile"
+    },
+    {
+        "label": "Logout",
+        "icon": "fa-home",
+        "special": true
+    }
+]

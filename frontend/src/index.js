@@ -39,7 +39,7 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    if (window.location.href.includes("/private")) this.setState({ hideNavbar: true })
+    if (window.location.href.includes("/private/")) this.setState({ hideNavbar: true })
   }
 
   handleTheme = () => {

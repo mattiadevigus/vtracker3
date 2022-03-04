@@ -7,9 +7,9 @@ import { BottomNavigation, BottomNavigationAction } from '@mui/material';
 // FA
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faHome, faServer, faUsers, faAddressCard } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faUser, faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faHome, faServer, faUsers, faAddressCard);
+library.add(faHome, faUser, faArrowRightFromBracket);
 
 class BottomNavbar extends Component {
 
@@ -33,8 +33,11 @@ class BottomNavbar extends Component {
                 onChange={this.handleLabel}
             >
                 {pages.map((page) => (
-                    <BottomNavigationAction label={page.label} value={page.label} icon={page.icon} />
+                    <BottomNavigationAction label={page.label} value={page.label} icon={<FontAwesomeIcon icon={page.icon} />} />
                 ))}
+
+                <BottomNavigationAction label="Logout" value="logout" icon={<FontAwesomeIcon icon={"fa-arrow-right-from-bracket"} />} />
+
             </BottomNavigation>
         )
     }

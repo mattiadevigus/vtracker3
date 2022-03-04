@@ -6,12 +6,7 @@
     },
     {
         "label": "Profile",
-        "icon": "fa-home",
+        "icon": "fa-user",
         "link": "/private/dashboard/profile"
-    },
-    {
-        "label": "Logout",
-        "icon": "fa-home",
-        "special": true
     }
 ]

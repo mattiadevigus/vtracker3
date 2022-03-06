@@ -6,7 +6,7 @@ import PeopleIcon from '@mui/icons-material/People';
 class CardDetail extends Component {
     render = () => {
         return (
-            <Card sx={{ backgroundColor: "rgba(0, 0, 0, 0.09)" }}>
+            <Card>
                 <CardHeader color="primary" title="Total Drivers" sx={{ paddingBottom: 0 }} action={
                     <PeopleIcon />
                 } />

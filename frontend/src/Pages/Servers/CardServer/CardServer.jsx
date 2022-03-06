@@ -31,7 +31,7 @@ class CardServer extends Component {
 
     render = () => {
         return (
-            <Card sx={{ backgroundColor: "rgba(0, 0, 0, 0.09)" }}>
+            <Card>
                 <CardHeader title="Server di Test" subheader="#8666" action={
                     <Typography variant="h6" color="primary">{this.props.pro}</Typography>
                 } />
@@ -57,7 +57,7 @@ class CardServer extends Component {
                         aria-expanded={this.state.expanded}
                         aria-label="show more"
                     >
-                        <ExpandMoreIcon style={{ textAlign: "right", color: "white" }} />
+                        <ExpandMoreIcon color="secondary" style={{ textAlign: "right" }} />
                     </ExpandMore>
                 </CardActions>
 

@@ -54,7 +54,7 @@ class App extends Component {
         {!this.state.hideNavbar ? <Navbar /> : <BottomNavbar />}
         <SpeedDial
           ariaLabel="Theme"
-          sx={{ position: 'fixed', bottom: 16, right: 16 }}
+          sx={{ display: {xs: "none", md: "block"}, position: 'fixed', bottom: 16, right: 16 }}
           icon={<Brightness4Icon />}
           onClick={this.handleTheme}
         />

@@ -3,6 +3,9 @@
         "primary": {
             "main": "#7a1212"
         },
+        "secondary": {
+            "main": "#7a1212"
+        },
         "background": {
             "default": "#fafafa"
         },

@@ -22,7 +22,6 @@ class Search extends Component {
                         type="tel"
                         fullWidth
                         label="Search Server's Tag"
-                        color='primary'
                         value={this.state.value}
                         InputProps={{
                             startAdornment: (

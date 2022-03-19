@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 
 import { Card, CardHeader, CardContent, CardActions, Grid, Collapse, Typography, Button, IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -50,7 +51,7 @@ class CardServer extends Component {
                     </CardContent>
                 </Collapse>
                 <CardActions disableSpacing>
-                    <Button href="/servers/98" variant="contained">Open</Button>
+                    <Button component={RouterLink} to="/servers/82" variant="contained">Open</Button>
                     <ExpandMore
                         expand={this.state.expanded}
                         onClick={this.handleExpandClick}
@@ -60,7 +61,6 @@ class CardServer extends Component {
                         <ExpandMoreIcon color="secondary" style={{ textAlign: "right" }} />
                     </ExpandMore>
                 </CardActions>
-
             </Card>
         )
     }

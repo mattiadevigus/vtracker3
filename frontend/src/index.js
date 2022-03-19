@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Mui
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -19,8 +19,8 @@ import BottomNavbar from './Partials/BottomNavbar/BottomNavbar';
 import Dashboard from './Private/Dashboard/Dashboard';
 
 // Temi
-import styleLight from './Themes/themeLight.json';
-import styleDark from './Themes/themeDark.json';
+import styleLight from './Themes/themeLight';
+import styleDark from './Themes/themeDark';
 
 const themeLight = createTheme(styleLight);
 const themeDark = createTheme(styleDark);
@@ -51,15 +51,15 @@ class App extends Component {
   render = () => {
     return (
       <ThemeProvider theme={this.state.light ? themeLight : themeDark}>
-        {!this.state.hideNavbar ? <Navbar /> : <BottomNavbar />}
         <SpeedDial
           ariaLabel="Theme"
-          sx={{ display: {xs: "none", md: "block"}, position: 'fixed', bottom: 16, right: 16 }}
+          sx={{ display: { xs: "none", md: "block" }, position: 'fixed', bottom: 16, right: 16 }}
           icon={<Brightness4Icon />}
           onClick={this.handleTheme}
         />
         <CssBaseline>
           <Router>
+            {!this.state.hideNavbar ? <Navbar /> : <BottomNavbar />}
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/servers" element={<Servers />} />

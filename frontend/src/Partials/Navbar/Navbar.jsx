@@ -3,7 +3,7 @@ import './Navbar.css';
 import './Screen.css';
 import pages from './pages.json'
 
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 
 import { AppBar, Box, Toolbar, Menu, MenuItem, Typography, Button, Tooltip, Avatar, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -95,8 +95,9 @@ export default function Navbar() {
                     {pages.map((page) => (
                         <Tooltip title={page.title}>
                             <Button
+                                component={RouterLink}
+                                to={page.link}
                                 key={page.id}
-                                href={page.link}
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >

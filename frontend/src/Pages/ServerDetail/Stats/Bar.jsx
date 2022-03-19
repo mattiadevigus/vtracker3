@@ -11,7 +11,7 @@ class Stats extends Component {
             data: {
                 labels: ['Driver 1', 'Driver 2', 'Driver 3', 'Driver 4', 'Driver 5', 'Driver 6'],
                 datasets: [{
-                    data: [12, 19, 3, 5, 2, 3],
+                    data: [1, 5, 9, 17, 19, 19],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -35,7 +35,6 @@ class Stats extends Component {
                         }
                     },
                     y: {
-                        beginAtZero: true,
                         grid: {
                             display: false
                         }

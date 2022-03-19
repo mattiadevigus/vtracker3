@@ -5,6 +5,7 @@ thead tr th{
 
 tbody tr{
     cursor: pointer;
+    border: none !important;
 }
 
 tbody tr td{

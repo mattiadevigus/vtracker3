@@ -29,16 +29,16 @@ class ServerDetail extends Component {
                 <Container>
                     <Typography variant="h4" textAlign="center" sx={{ marginBottom: "1rem" }}><FormatListNumberedIcon /> Timetable</Typography>
 
-                    <TableContainer component={Paper} sx={{ marginBottom: "1rem" }}>
+                    <TableContainer component={Paper} sx={{ marginBottom: "2rem" }}>
                         <TimeTable />
                     </TableContainer>
                 </Container>
 
 
                 <Container>
-                    <Typography variant="h4" textAlign="center" sx={{ marginBottom: "1rem" }}><BarChartIcon /> Stats</Typography>
+                    <Typography variant="h4" textAlign="center" sx={{ marginBottom: "1rem" }}><BarChartIcon /> Gap difference</Typography>
                     <Grid container spacing={2}>
-                        <Grid item xs={12} md={6}>
+                        <Grid item xs={12}>
                             <Bar />
                         </Grid>
                     </Grid>

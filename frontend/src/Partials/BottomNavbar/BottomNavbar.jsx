@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import './BottomNavbar.css';
 import pages from './pages.json'
+import { Link as RouterLink } from 'react-router-dom';
 
 import { BottomNavigation, BottomNavigationAction } from '@mui/material';
 
@@ -17,8 +18,12 @@ class BottomNavbar extends Component {
         super(props);
 
         this.state = {
-            active: "Profile"
+            active: window.location.href.split("/")[5] != null ? window.location.href.split("/")[5] : "dashboard"
         }
+    }
+
+    componentDidMount = () => {
+        console.log(window.location.href.split("/")[4])
     }
 
     handleLabel = (event, value) => {
@@ -33,11 +38,10 @@ class BottomNavbar extends Component {
                 onChange={this.handleLabel}
             >
                 {pages.map((page) => (
-                    <BottomNavigationAction label={page.label} value={page.label} icon={<FontAwesomeIcon icon={page.icon} />} />
+                    <BottomNavigationAction component={RouterLink} to={page.link} label={page.label} value={page.label} icon={<FontAwesomeIcon icon={page.icon} />} />
                 ))}
 
-                <BottomNavigationAction label="Logout" value="logout" icon={<FontAwesomeIcon icon={"fa-arrow-right-from-bracket"} />} />
-
+                <BottomNavigationAction component={RouterLink} to="/private/logout" label="Logout" value="logout" icon={<FontAwesomeIcon icon={"fa-arrow-right-from-bracket"}  />} />
             </BottomNavigation>
         )
     }

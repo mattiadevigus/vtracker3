@@ -15,28 +15,27 @@ class Search extends Component {
 
     render = () => {
         return (
-            <Box component="form">
-                <FormControl fullWidth>
-                    <TextField
-                        variant="filled"
-                        type="tel"
-                        fullWidth
-                        label="Search Server's Tag"
-                        value={this.state.value}
-                        InputProps={{
-                            startAdornment: (
-                                <InputAdornment position="start">
-                                    #
-                                </InputAdornment>
-                            )
-                        }}
-                    />
-                    <FormHelperText sx={{ textAlign: "right", marginBottom: "1rem" }}>
-                        <Link underline="none" href="/help">
-                            Need help?
-                        </Link>
-                    </FormHelperText>
-                </FormControl>
+            <Box bgcolor="primary" >
+                <TextField
+                    bgcolor="primary"
+                    variant="filled"
+                    type="tel"
+                    fullWidth
+                    label="Search Server's Tag"
+                    value={this.state.value}
+                    InputProps={{
+                        startAdornment: (
+                            <InputAdornment position="start">
+                                #
+                            </InputAdornment>
+                        )
+                    }}
+                />
+                <FormHelperText sx={{ textAlign: "right", marginBottom: "1rem" }}>
+                    <Link underline="none" href="/help">
+                        Need help?
+                    </Link>
+                </FormHelperText>
             </Box>
         )
     }

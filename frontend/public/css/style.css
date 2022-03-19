@@ -30,6 +30,11 @@ section {
   margin-top: 5rem;
 }
 
+a {
+  text-decoration: none;
+  border: none;
+}
+
 .logo-1 {
   width: 2rem;
   margin: 1rem;

@@ -1,11 +1,11 @@
 [
     {
-        "label": "Home",
+        "label": "dashboard",
         "icon": "fa-home",
         "link": "/private/dashboard"
     },
     {
-        "label": "Profile",
+        "label": "profile",
         "icon": "fa-user",
         "link": "/private/dashboard/profile"
     }

@@ -7,21 +7,16 @@ class Stats extends Component {
     componentDidMount = () => {
         const ctx = document.getElementById("bar").getContext("2d");
         new Chart(ctx, {
-            type: 'line',
+            type: 'bar',
             data: {
-                labels: ['Driver 1', 'Driver 2', 'Driver 3', 'Driver 4', 'Driver 5', 'Driver 6'],
+                labels: ['Driver 2', 'Driver 3', 'Driver 4', 'Driver 5', 'Driver 6', 'Driver 7'],
                 datasets: [{
-                    data: [1, 5, 9, 17, 19, 19],
+                    data: [0.34, 1.345, 1.765, 2.237, 3.239, 9.219],
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
+                        '#7a1212',
                     ],
                     borderColor: "#7a1212",
-                    borderWidth: 1
+                    borderWidth: 0
                 }]
             },
             options: {
@@ -31,11 +26,16 @@ class Stats extends Component {
                 scales: {
                     x: {
                         grid: {
-                            display: false
+                            display: false,
+                            drawBorder: false
                         }
                     },
                     y: {
                         grid: {
+                            display: false,
+                            drawBorder: false
+                        },
+                        ticks: {
                             display: false
                         }
                     }

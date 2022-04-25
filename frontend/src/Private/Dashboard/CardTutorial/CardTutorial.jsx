@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 import { Card, CardHeader, CardContent, List, ListItem, ListItemText, ListItemAvatar, Avatar, Divider } from '@mui/material';
 

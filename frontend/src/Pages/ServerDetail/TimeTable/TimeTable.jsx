@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 import { Table, TableHead, TableBody, TableRow, TableCell, Button } from '@mui/material';
 import './TimeTable.css';
@@ -25,7 +25,7 @@ class TimeTable extends Component {
                 </TableHead>
 
                 <TableBody>
-                    <TableRow onClick={this.driverDetail}>
+                    <TableRow>
                         <TableCell>1</TableCell>
                         <TableCell>Mattia Devigus</TableCell>
                         <TableCell>18.234</TableCell>

@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import './Servers.css';
 
 import { Box, Grid, Container } from '@mui/material';

@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 import { Card, CardHeader, CardContent, Typography } from '@mui/material';
 import PeopleIcon from '@mui/icons-material/People';

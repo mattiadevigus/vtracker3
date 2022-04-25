@@ -18,8 +18,14 @@ const themeLight = {
         MuiFilledInput: {
             styleOverrides: {
                 root: {
-                    backgroundColor: "#fff",
-                }
+                    background: "#fff",
+                    "&:hover": {
+                        backgroundColor: "#fff !important",
+                    },
+                    "&.Mui-focused": {
+                        backgroundColor: "#fff !important",
+                    }
+                },
             }
         }
     }

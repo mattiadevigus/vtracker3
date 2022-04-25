@@ -3,8 +3,8 @@ const { app, BrowserWindow } = require('electron')
 function createWindow () {
 
     const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1920,
+    height: 1080,
     frame: true,
     autoHideMenuBar: true,
     titleBarStyle: "hiddenInset",
@@ -15,7 +15,6 @@ function createWindow () {
 
   win.loadURL('http://localhost:3000');
 
-  win.webContents.openDevTools()
 }
 
 app.whenReady().then(createWindow)

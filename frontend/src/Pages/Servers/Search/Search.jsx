@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Box, FormControl, TextField, InputAdornment, FormHelperText, Link } from '@mui/material';
+import { Box, TextField, InputAdornment, FormHelperText, Link } from '@mui/material';
 
 
 class Search extends Component {
@@ -15,9 +15,8 @@ class Search extends Component {
 
     render = () => {
         return (
-            <Box bgcolor="primary" >
+            <Box >
                 <TextField
-                    bgcolor="primary"
                     variant="filled"
                     type="tel"
                     fullWidth

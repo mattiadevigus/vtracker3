@@ -19,10 +19,13 @@ const themeDark = {
         MuiFilledInput: {
             styleOverrides: {
                 root: {
-                    backgroundColor: "#26262e",
-                    "&.Mui-hover": {
-                        backgroundColor: "green"
-                      }
+                    background: "#26262e",
+                    "&:hover": {
+                        backgroundColor: "#26262e !important",
+                    },
+                    "&.Mui-focused": {
+                        backgroundColor: "#26262e !important",
+                    }
                 },
             }
         }

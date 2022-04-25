@@ -5,7 +5,7 @@ The Assetto Corsa metaverse tracker ♾️
 * .env: environment variables\
 * node_modules: all packages of the project\
 * src
-    * config: contains configuration elements (example: connection with the database)
+    * config: contains configuration elements
     * controllers: functions called by routes
     * routes: HTTP request
     * util: vtracker script

@@ -1,19 +1,20 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow } = require('electron');
+const server = require('./server');
 
-function createWindow () {
+function createWindow() {
 
-    const win = new BrowserWindow({
-    width: 1920,
-    height: 1080,
+  const win = new BrowserWindow({
+    minWidth: 700,
+    width: 1280,
+    height: 720,
     frame: true,
     autoHideMenuBar: true,
-    titleBarStyle: "hiddenInset",
     webPreferences: {
       nodeIntegration: true
     }
   })
 
-  win.loadURL('http://localhost:3000');
+  win.loadURL('http://localhost:9000');
 
 }
 
@@ -26,7 +27,7 @@ app.on('window-all-closed', () => {
 })
 
 app.on('activate', () => {
-  
+
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow()
   }

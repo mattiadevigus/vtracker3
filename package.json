@@ -6,7 +6,8 @@
   "scripts": {
     "frontend": "cd frontend && npm start",
     "backend": "cd backend/config/ && nodemon server.js",
-    "dev": "del-cli --force backend/build && cd frontend && npm run build && xcopy build ..\\backend\\build /i /e && cd ../backend/src && nodemon server.js"
+    "dev": "del-cli --force backend/build && cd frontend && npm run build && xcopy build ..\\backend\\build /i /e && cd ../backend/src && nodemon server.js",
+    "electron": "cd backend && electron ."
   },
   "repository": {
     "type": "git",

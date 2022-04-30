@@ -20,4 +20,6 @@ The Assetto Corsa metaverse tracker ♾️
     * server.js: create a connection
     * main.js: render the webapp on Electron
 
-
+# To Do
+* Convert all React classes to functions
+* ...

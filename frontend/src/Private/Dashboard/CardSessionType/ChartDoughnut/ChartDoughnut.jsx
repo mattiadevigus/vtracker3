@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { Chart, registerables } from 'chart.js';
 
 import { Typography } from '@mui/material';

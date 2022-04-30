@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
 import { Card, CardHeader, CardContent, CardActions, Grid, Collapse, Typography, Button, IconButton } from '@mui/material';

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import './Dashboard.css';
 
 import { Box, Grid, Card, CardHeader, CardContent, Typography, LinearProgress, Button, ListItem, ListItemText, Switch } from '@mui/material';

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { Paper, Container, Grid, TableContainer, Typography } from '@mui/material';
 
 import TimeTable from './TimeTable/TimeTable';

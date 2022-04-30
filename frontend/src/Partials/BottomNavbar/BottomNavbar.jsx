@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import './BottomNavbar.css';
 import pages from './pages.json'
 import { Link as RouterLink } from 'react-router-dom';

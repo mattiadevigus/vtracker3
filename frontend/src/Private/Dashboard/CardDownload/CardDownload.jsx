@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 import { Card, CardHeader, CardContent, Button } from '@mui/material';
 

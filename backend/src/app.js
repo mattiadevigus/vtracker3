@@ -7,6 +7,6 @@ const vtRoutes = require('./routes/vt/router');
 const app = express();
 
 app.use(express.static(path.join(__dirname, '../build')));
-app.use("/", vtRoutes);
+app.use('/', vtRoutes);
 
 module.exports = app;

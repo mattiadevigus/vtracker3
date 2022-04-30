@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 import { Box, TextField, InputAdornment, FormHelperText, Link } from '@mui/material';
 

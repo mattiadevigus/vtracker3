@@ -4,6 +4,7 @@
   "description": "The Assetto Corsa metaverse tracker",
   "homepage": ".",
   "scripts": {
+    "first-start": "npm i -g del-cli nodemon && cd backend && npm i && cd ../frontend && npm i & cd.. && npm run dev",
     "frontend": "cd frontend && npm start",
     "backend": "cd backend/config/ && nodemon server.js",
     "dev": "del-cli --force backend/build && cd frontend && npm run build && xcopy build ..\\backend\\build /i /e && cd ../backend/src && nodemon server.js",

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 import { Table, TableHead, TableBody, TableRow, TableCell, Button } from '@mui/material';
 import './TimeTable.css';

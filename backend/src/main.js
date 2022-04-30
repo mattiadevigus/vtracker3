@@ -1,5 +1,7 @@
 const { app, BrowserWindow } = require('electron');
+const path = require('path');
 const server = require('./server');
+
 
 function createWindow() {
 
@@ -7,11 +9,9 @@ function createWindow() {
     minWidth: 700,
     width: 1280,
     height: 720,
-    frame: true,
+    frame: false,
     autoHideMenuBar: true,
-    webPreferences: {
-      nodeIntegration: true
-    }
+    titleBarStyle: "hidden",
   })
 
   win.loadURL('http://localhost:9000');
@@ -20,15 +20,12 @@ function createWindow() {
 
 app.whenReady().then(createWindow)
 
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
+app.on('ready', createWindow)
+
+app.on('window-all-closed', function () {
+  if (process.platform !== 'darwin') app.quit()
 })
 
-app.on('activate', () => {
-
-  if (BrowserWindow.getAllWindows().length === 0) {
-    createWindow()
-  }
+app.on('activate', function () {
+  if (mainWindow === null) createWindow()
 })

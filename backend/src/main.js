@@ -9,16 +9,13 @@ function createWindow() {
     minWidth: 700,
     width: 1280,
     height: 720,
-    frame: false,
+    frame: true,
     autoHideMenuBar: true,
-    titleBarStyle: "hidden",
   })
 
   win.loadURL('http://localhost:9000');
 
 }
-
-app.whenReady().then(createWindow)
 
 app.on('ready', createWindow)
 

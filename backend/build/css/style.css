@@ -26,7 +26,13 @@
   background: #8b0000;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 section {
+  position: absolute;
+  width: 100%;
   margin-top: 5rem;
 }
 
@@ -64,6 +70,30 @@ a {
 
 .bg3 {
   animation-duration: 5s;
+}
+
+.page {
+  left: 15px;
+  right: 15px;
+}
+
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
 }
 
 @keyframes slide {

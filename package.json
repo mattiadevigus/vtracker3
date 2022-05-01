@@ -6,9 +6,11 @@
   "scripts": {
     "first-start": "npm i -g del-cli nodemon && cd backend && npm i && cd ../frontend && npm i & cd.. && npm run dev",
     "frontend": "cd frontend && npm start",
-    "backend": "cd backend/config/ && nodemon server.js",
-    "dev": "del-cli --force backend/build && cd frontend && npm run build && xcopy build ..\\backend\\build /i /e && cd ../backend/src && nodemon server.js",
-    "electron": "cd backend && electron ."
+    "backend": "cd backend/src && node server.js",
+    "dev": "cd backend/src && nodemon server.js",
+    "dev-update": "del-cli --force backend/build && cd frontend && npm run build && xcopy build ..\\backend\\build /i /e && cd ../backend/src && nodemon server.js",
+    "electron": "cd backend && electron .",
+    "electron-update": "del-cli --force backend/build && cd frontend && npm run build && xcopy build ..\\backend\\build /i /e && cd ../backend && electron ."
   },
   "repository": {
     "type": "git",

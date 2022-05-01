@@ -12,6 +12,7 @@ import Navbar from "../Partials/Navbar/Navbar";
 import HomePage from "../Pages/HomePage/HomePage";
 import Servers from "../Pages/Servers/Servers";
 import ServersDetail from "../Pages/ServerDetail/ServerDetail";
+import DriverDetail from "../Pages/ServerDetail/DriverDetail/DriverDetail";
 
 // Private components
 import BottomNavbar from "../Partials/BottomNavbar/BottomNavbar";
@@ -61,6 +62,7 @@ const App = () => {
               <Route path="/" element={<HomePage />} />
               <Route path="/servers" element={<Servers />} />
               <Route path="/servers/:tag" element={<ServersDetail />} />
+              <Route path="/servers/:tag/:drivertag" element={<DriverDetail />} />
               <Route path="/private/dashboard" element={<Dashboard />} />
             </Routes>
           </CSSTransition>

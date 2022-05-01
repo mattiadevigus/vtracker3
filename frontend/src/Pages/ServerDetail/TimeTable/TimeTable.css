@@ -1,13 +1,10 @@
 thead tr th{
     background-color: #7a1212 !important;
     color: white !important;
-}
-
-tbody tr{
-    cursor: pointer;
-    border: none !important;
+    text-align: center !important;
 }
 
 tbody tr td{
     border-bottom: none !important;
+    text-align: center !important;
 }

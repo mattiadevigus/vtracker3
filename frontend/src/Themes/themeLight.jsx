@@ -7,7 +7,7 @@ const themeLight = {
             main: "#7a1212"
         },
         background: {
-            default: "#fafafa"
+            default: "#efefef"
         },
         text: {
             primary: "#000000",

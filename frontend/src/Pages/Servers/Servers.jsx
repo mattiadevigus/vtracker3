@@ -1,14 +1,9 @@
-import { Component } from 'react';
-import './Servers.css';
+import "./Servers.css";
+import { Box, Grid, Container } from "@mui/material";
+import Search from "./Search/Search";
+import CardServer from "./CardServer/CardServer";
 
-import { Box, Grid, Container } from '@mui/material';
-
-import Search from './Search/Search';
-import CardServer from './CardServer/CardServer';
-
-class Servers extends Component {
-    
-    render = () => {
+const Servers = () => {
         return (
             <section className="servers">
                 <Container>
@@ -34,8 +29,7 @@ class Servers extends Component {
                     </Box>
                 </Container>
             </section>
-        )
-    }
-}
+        );
+    };
 
-export default Servers
+export default Servers;

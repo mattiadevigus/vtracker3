@@ -1,1 +1,0 @@
-// script di lettura json Assetto Corsa Competizione

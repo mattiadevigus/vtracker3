@@ -1,39 +1,25 @@
-import * as React from 'react';
-import './Navbar.css';
-import './Screen.css';
-import pages from './pages.json'
-
-import { Link as RouterLink } from 'react-router-dom';
-
-import { AppBar, Box, Toolbar, Menu, MenuItem, Typography, Button, Tooltip, Avatar, IconButton } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-
+import { useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import { AppBar, Box, Toolbar, Menu, MenuItem, Typography, Button, Tooltip, Avatar, IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faHome, faServer, faUsers, faAddressCard } from "@fortawesome/free-solid-svg-icons";
+import "./Navbar.css";
+import "./Screen.css";
+import pages from "./pages.json"
 
 library.add(faHome, faServer, faUsers, faAddressCard);
 
-const settings = ['Admin Area'];
+const settings = ["Admin Area"];
 
 export default function Navbar() {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
-
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
+    const [anchorElNav, setAnchorElNav] = useState(null);
+    const [anchorElUser, setAnchorElUser] = useState(null);
+    const handleOpenNavMenu = (event) => { setAnchorElNav(event.currentTarget); };
+    const handleOpenUserMenu = (event) => { setAnchorElUser(event.currentTarget); };
+    const handleCloseNavMenu = () => { setAnchorElNav(null); };
+    const handleCloseUserMenu = () => { setAnchorElUser(null); };
 
     return (
         <AppBar className="navbar" color="primary" position="fixed">
@@ -42,12 +28,11 @@ export default function Navbar() {
                     variant="h6"
                     noWrap
                     component="div"
-                    sx={{ display: { xs: 'none', md: 'flex' } }}
+                    sx={{ display: { xs: "none", md: "flex" } }}
                 >
                     VT3
                 </Typography>
-
-                <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                     <IconButton
                         size="large"
                         aria-label="account of current user"
@@ -62,18 +47,18 @@ export default function Navbar() {
                         id="menu-appbar"
                         anchorEl={anchorElNav}
                         anchorOrigin={{
-                            vertical: 'bottom',
-                            horizontal: 'left',
+                            vertical: "bottom",
+                            horizontal: "left",
                         }}
                         keepMounted
                         transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'left',
+                            vertical: "top",
+                            horizontal: "left",
                         }}
                         open={Boolean(anchorElNav)}
                         onClose={handleCloseNavMenu}
                         sx={{
-                            display: { xs: 'block', md: 'none' },
+                            display: { xs: "block", md: "none" },
                         }}
                     >
                         {pages.map((page) => (
@@ -87,11 +72,11 @@ export default function Navbar() {
                     variant="h6"
                     noWrap
                     component="div"
-                    sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+                    sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
                 >
                     LOGO
                 </Typography>
-                <Box sx={{ flexGrow: 1, justifyContent: 'center', display: { xs: 'none', md: 'flex' } }}>
+                <Box sx={{ flexGrow: 1, justifyContent: "center", display: { xs: "none", md: "flex" } }}>
                     {pages.map((page) => (
                         <Tooltip title={page.title}>
                             <Button
@@ -99,14 +84,13 @@ export default function Navbar() {
                                 to={page.link}
                                 key={page.id}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, color: "white", display: "block" }}
                             >
                                 <FontAwesomeIcon icon={page.icon} />
                             </Button>
                         </Tooltip>
                     ))}
                 </Box>
-
                 <Box sx={{ flexGrow: 0 }}>
                     <Tooltip title="Open settings">
                         <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -114,17 +98,17 @@ export default function Navbar() {
                         </IconButton>
                     </Tooltip>
                     <Menu
-                        sx={{ mt: '45px' }}
+                        sx={{ mt: "45px" }}
                         id="menu-appbar"
                         anchorEl={anchorElUser}
                         anchorOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
+                            vertical: "top",
+                            horizontal: "right",
                         }}
                         keepMounted
                         transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
+                            vertical: "top",
+                            horizontal: "right",
                         }}
                         open={Boolean(anchorElUser)}
                         onClose={handleCloseUserMenu}
@@ -139,4 +123,4 @@ export default function Navbar() {
             </Toolbar>
         </AppBar>
     );
-}
+};

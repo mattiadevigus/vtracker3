@@ -1,24 +1,21 @@
-import { Component } from 'react';
-import { Chart, registerables } from 'chart.js';
-
-import { Typography } from '@mui/material';
+import { useEffect } from "react";
+import { Chart, registerables } from "chart.js";
 
 Chart.register(...registerables);
 
-class ChartDoughnut extends Component {
-
-    componentDidMount = () => {
+const ChartDoughnut = () => {
+    useEffect(() => {
         const ctx = document.getElementById("doughnut").getContext("2d");
         new Chart(ctx, {
-            type: 'doughnut',
+            type: "doughnut",
             data: {
-                labels: ['Free Pratice', 'Qualify', 'Race'],
+                labels: ["Free Pratice", "Qualify", "Race"],
                 datasets: [{
                     data: [12, 19, 3],
                     backgroundColor: [
-                        '#fff',
-                        '#7a1212',
-                        '#757575',
+                        "#fff",
+                        "#7a1212",
+                        "#757575",
                     ],
                     borderColor: "#15151e",
                     borderWidth: 1
@@ -36,15 +33,13 @@ class ChartDoughnut extends Component {
 
             }
         });
-    }
+    }, []);
 
-    render = () => {
-        return (
-            <div>
-                <canvas id="doughnut"></canvas>
-            </div>
-        )
-    }
-}
+    return (
+        <div>
+            <canvas id="doughnut"></canvas>
+        </div>
+    );
+};
 
 export default ChartDoughnut;

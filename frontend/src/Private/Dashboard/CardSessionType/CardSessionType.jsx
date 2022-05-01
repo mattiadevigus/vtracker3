@@ -1,20 +1,15 @@
-import { Component } from 'react';
+import { Card, CardHeader, CardContent } from "@mui/material";
+import ChartDoughnut from "./ChartDoughnut/ChartDoughnut";
 
-import { Card, CardHeader, CardContent } from '@mui/material';
-
-import ChartDoughnut from './ChartDoughnut/ChartDoughnut';
-
-class CardSessionType extends Component {
-    render = () => {
-        return(
-            <Card>
-                <CardHeader title="Sessions Type"/>
-                <CardContent>
+const CardSessionType = () => {
+    return (
+        <Card>
+            <CardHeader title="Sessions Type" />
+            <CardContent>
                 <ChartDoughnut />
-                </CardContent>
-            </Card>
-        )
-    }
-}
+            </CardContent>
+        </Card>
+    );
+};
 
-export default CardSessionType
+export default CardSessionType;

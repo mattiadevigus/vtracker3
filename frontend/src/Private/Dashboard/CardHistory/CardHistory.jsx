@@ -1,10 +1,6 @@
-import { Component } from 'react';
+import { Timeline, TimelineItem, TimelineSeparator, TimelineOppositeContent, TimelineConnector, TimelineContent, TimelineDot } from "@mui/lab";
 
-import { Timeline, TimelineItem, TimelineSeparator, TimelineOppositeContent, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab';
-
-class CardHistory extends Component {
-
-    render = () => {
+const CardHistory = () => {
         return (
             <Timeline position="left" >
                 <TimelineItem>
@@ -92,8 +88,7 @@ class CardHistory extends Component {
                     <TimelineContent>12:23</TimelineContent>
                 </TimelineItem>
             </Timeline>
-        )
-    }
-}
+        );
+};
 
 export default CardHistory;

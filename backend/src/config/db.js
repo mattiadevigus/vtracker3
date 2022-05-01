@@ -1,1 +1,1 @@
-// contiene gli script di connessione con Database
+// contains db connection's script (MYSQL)

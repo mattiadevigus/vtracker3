@@ -23,7 +23,7 @@ The Assetto Corsa metaverse tracker ♾️
     * main.js: settings for desktop app
 
 # To Do
-* Convert all React classes to functions
+* Convert all React classes to functions (Made it)
 * Change Titlebar on Electron Project
 * ...
 

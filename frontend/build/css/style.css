@@ -51,6 +51,21 @@ a {
   margin: 2rem;
 }
 
+.img-1 {
+  width: 2rem;
+  margin: 1rem;
+}
+
+.img-2 {
+  width: 3rem;
+  margin: 1rem;
+}
+
+.img-3 {
+  width: 4rem;
+  margin: 1rem;
+}
+
 .background-animation {
   animation: slide 5s ease-in-out infinite alternate;
   background-image: linear-gradient(-60deg, #17171d 50%, #dbdbdb 50%);
@@ -94,6 +109,18 @@ a {
 .page-exit-active {
   opacity: 0;
   transition: opacity 300ms;
+}
+
+.best-time {
+  color: #9e009e;
+}
+
+.personal-best-time {
+  color: #129e00;
+}
+
+.red-time {
+  color: #7a1212;
 }
 
 @keyframes slide {

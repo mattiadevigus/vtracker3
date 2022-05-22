@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 // Mui
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -56,8 +55,6 @@ const App = () => {
       />
       {!hideNavbar ? <Navbar /> : <BottomNavbar />}
       <CssBaseline>
-        <TransitionGroup>
-          <CSSTransition classNames="page" timeout={300} key={location.key}>
             <Routes location={location}>
               <Route path="/" element={<HomePage />} />
               <Route path="/servers" element={<Servers />} />
@@ -65,8 +62,6 @@ const App = () => {
               <Route path="/servers/:tag/:drivertag" element={<DriverDetail />} />
               <Route path="/private/dashboard" element={<Dashboard />} />
             </Routes>
-          </CSSTransition>
-        </TransitionGroup>
       </CssBaseline>
     </ThemeProvider>
   );

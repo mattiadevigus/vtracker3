@@ -8,7 +8,7 @@
     "frontend": "cd frontend && npm start",
     "backend": "cd backend/src && node server.js",
     "dev": "cd backend/src && nodemon server.js",
-    "dev-update": "del-cli --force backend/build && cd frontend && npm run build && xcopy build ..\\backend\\build /i /e && cd ../backend/src && nodemon server.js",
+    "dev-update": "del-cli --force backend/build && cd frontend && npm run build && xcopy build ..\\backend\\build /i /e && cd ../backend/src && nodemon server.js"
   },
   "repository": {
     "type": "git",

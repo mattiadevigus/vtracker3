@@ -7,17 +7,19 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faHome, faServer, faUsers, faAddressCard } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 import "./Screen.css";
-import pages from "./pages.json"
+import pages from "./pages.json";
 
 library.add(faHome, faServer, faUsers, faAddressCard);
 
 const settings = ["Admin Area"];
 
-export default function Navbar() {
+const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [anchorElUser, setAnchorElUser] = useState(null);
+
     const handleOpenNavMenu = (event) => { setAnchorElNav(event.currentTarget); };
     const handleOpenUserMenu = (event) => { setAnchorElUser(event.currentTarget); };
+
     const handleCloseNavMenu = () => { setAnchorElNav(null); };
     const handleCloseUserMenu = () => { setAnchorElUser(null); };
 
@@ -63,7 +65,7 @@ export default function Navbar() {
                     >
                         {pages.map((page) => (
                             <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                                <Typography color="black">{page.title}</Typography>
+                                <Typography>{page.title}</Typography>
                             </MenuItem>
                         ))}
                     </Menu>
@@ -124,3 +126,5 @@ export default function Navbar() {
         </AppBar>
     );
 };
+
+export default Navbar;

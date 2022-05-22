@@ -3,6 +3,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { Card, CardHeader, CardContent, CardActions, Grid, Collapse, Typography, Button, IconButton } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import StarHalfIcon from '@mui/icons-material/StarHalf';
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -15,7 +16,7 @@ const ExpandMore = styled((props) => {
     }),
 }));
 
-const CardServer = () => {
+const CardServer = (props) => {
     const [expanded, setExpanded] = useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);
@@ -23,8 +24,8 @@ const CardServer = () => {
 
     return (
         <Card>
-            <CardHeader title="Server di Test" subheader="#8666" action={
-                <Typography variant="h6" color="primary">Test</Typography>
+            <CardHeader title="Server di Test" className="remove-subheader" subheader="#8666" action={
+                <Typography variant="h5" color="primary">{props.pro ? <StarHalfIcon fontSize="large" /> : ""}</Typography>
             } />
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>

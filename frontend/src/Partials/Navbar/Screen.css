@@ -4,16 +4,22 @@ and (max-width : 768px) {
         padding-left: 1rem;
         padding-right: 1rem;
     }
+
+    .remove-subheader .MuiCardHeader-subheader {
+        display: none;
+    }
 }
 
 @media only screen 
 and (max-width : 989px) and (min-width : 769px) {
-
+    .only-desktop {
+        display: none;
+    }
 }
 
 @media only screen 
 and (max-width : 1400px) and (min-width: 990px) {
-    
+
 }
 
 @media only screen 

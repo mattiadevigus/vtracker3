@@ -1,7 +1,5 @@
-// routes base
-
-const controller = require('./../../controllers/vt/controller');
-const router = require('express').Router();
+const controller = require("./../../controllers/vt/controller");
+const router = require("express").Router();
 
 router.get("*", controller.all);
 

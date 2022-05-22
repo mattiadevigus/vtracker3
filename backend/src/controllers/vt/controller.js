@@ -1,6 +1,6 @@
 // controllers base
 
-const path = require('path');
+const path = require("path");
 
 exports.test = (req, res) => {
     res.send("test");

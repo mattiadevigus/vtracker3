@@ -6,8 +6,6 @@ The Assetto Corsa metaverse tracker ♾️
 * npm run frontend: start frontend server
 * npm run backend: start backend server
 * npm run dev-update: start backend app with update of build folder (nodemon)
-* npm run electron: start desktop app with no update of build folder
-* npm run electron-update: start desktop app with update of build folder
 
 # Explanation of the structure (backend)
 * .env: environment variables\
@@ -19,12 +17,11 @@ The Assetto Corsa metaverse tracker ♾️
     * util: vtracker script
 
     * app.js: contains express middleware configuration
-    * server.js: create a connection
-    * main.js: settings for desktop app
+    * main.js: index
 
 # To Do
-* Convert all React classes to functions (Made it)
-* Change Titlebar on Electron Project
-* ...
+* Create Database Schema
+* Develop Frontend
+* Develop Desktop Tracker
 
-# This document is WIP
+...

@@ -1,0 +1,11 @@
+.best-lap {
+    border-left: 2px solid #9e009e
+}
+
+.personal-best-lap {
+    border-left: 2px solid #129e00;
+}
+
+.red-lap {
+    border-left: 2px solid #9e1616;
+}

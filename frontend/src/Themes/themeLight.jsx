@@ -4,10 +4,10 @@ const themeLight = {
             main: "#7a1212"
         },
         secondary: {
-            main: "#7a1212"
+            main: "#525252"
         },
         background: {
-            default: "#efefef"
+            default: "#efefef",
         },
         text: {
             primary: "#000000",

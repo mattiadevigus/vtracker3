@@ -1,0 +1,11 @@
+.best-sector {
+    border-bottom: 3px solid #9e009e;
+}
+
+.personal-best-sector {
+    border-bottom: 3px solid #129e00;
+}
+
+.slow-sector {
+    border-bottom: 3px solid #9e1616;;
+}

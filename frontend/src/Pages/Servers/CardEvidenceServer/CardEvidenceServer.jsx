@@ -16,8 +16,8 @@ const ExpandMore = styled((props) => {
     }),
 }));
 
-const CardServer = (props) => {
-    const [expanded, setExpanded] = useState(false);
+const CardEvidenceServer = (props) => {
+    const [expanded, setExpanded] = useState(true);
     const handleExpandClick = () => {
         setExpanded(!expanded);
     }
@@ -25,18 +25,23 @@ const CardServer = (props) => {
     return (
         <Card>
             <CardHeader title="Server di Test" className="remove-subheader" subheader="#8666" action={
-                <Typography variant="h5" color="secondary">Q</Typography>
+                <Typography variant="h5" color="primary">{props.pro ? <StarHalfIcon fontSize="large" /> : ""}</Typography>
             } />
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
-                    <Grid container>
-                        <Grid item xs={4}>
-                            <img style={{ width: "4rem" }} src="/img/tracks/spa.png" alt="SPA" />
+                    <Grid container textAlign="center">
+                        <Grid item xs={12} md={4}>
+                            <Typography variant="h4">Track: Spa</Typography>
+                            <Typography variant="h4">BestTime: 1:21:293</Typography>
+                            <Typography variant="h4">Driver: 32</Typography>
                         </Grid>
-                        <Grid item xs={8}>
-                            <Typography>Track: Spa</Typography>
-                            <Typography>BestTime: 1:21:293</Typography>
-                            <Typography>Driver: 32</Typography>
+                        <Grid item xs={12} md={4}>
+                            <Typography variant="h1">R</Typography>
+                            <Typography variant="h5" color="secondary">Race</Typography>
+                        </Grid>
+                        <Grid item xs={12} md={4}>
+                            <img style={{ width: "6rem" }} src="/img/tracks/spa.png" alt="SPA" />
+                            <Typography variant="h4">SPA</Typography>
                         </Grid>
                     </Grid>
                 </CardContent>
@@ -56,4 +61,4 @@ const CardServer = (props) => {
     );
 };
 
-export default CardServer;
+export default CardEvidenceServer;

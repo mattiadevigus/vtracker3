@@ -1,7 +1,8 @@
 import "./Servers.css";
-import { Box, Grid, Container } from "@mui/material";
+import { Box, Grid, Container, Card } from "@mui/material";
 import Search from "./Search/Search";
 import CardServer from "./CardServer/CardServer";
+import CardEvidenceServer from "./CardEvidenceServer/CardEvidenceServer";
 
 const Servers = () => {
     return (
@@ -11,7 +12,7 @@ const Servers = () => {
                 <Box>
                     <Grid container spacing={{ xs: 0, md: 1 }}>
                         <Grid item xs={12} md={12}>
-                            <CardServer />
+                            <CardEvidenceServer />
                         </Grid>
                         <Grid item xs={12} md={4}>
                             <CardServer pro={true} />

@@ -1,11 +1,17 @@
 .best-sector {
+    padding: 5px;
     border-bottom: 3px solid #9e009e;
+    margin-bottom: 4px !important;
 }
 
 .personal-best-sector {
+    padding: 5px;
     border-bottom: 3px solid #129e00;
+    margin-bottom: 4px !important;
 }
 
 .slow-sector {
-    border-bottom: 3px solid #9e1616;;
+    padding: 5px;
+    border-bottom: 3px solid #9e1616;
+    margin-bottom: 4px !important;
 }

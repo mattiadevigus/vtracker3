@@ -41,6 +41,10 @@ a {
   border: none;
 }
 
+svg {
+  vertical-align: middle;
+}
+
 .logo-1 {
   width: 2rem;
   margin: 1rem;

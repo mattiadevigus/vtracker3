@@ -10,12 +10,18 @@ const CardTimes = () => {
                 <Avatar>
                     <FormatListNumberedIcon color="primary" sx={{ transform: "scaleX(-1)", }} />
                 </Avatar>} />
-            <CardContent sx={{maxHeight: "82vh", overflowY: "auto"}}>
+            <CardContent sx={{maxHeight: "762px", overflowY: "auto"}}>
                 <AccordionTime type="best"/>
                 <AccordionTime type="personal"/>
                 <AccordionTime/>
                 <AccordionTime/>
                 <AccordionTime type="slow"/>
+                <AccordionTime/>
+                <AccordionTime/>
+                <AccordionTime type="slow"/>
+                <AccordionTime/>
+                <AccordionTime/>
+                <AccordionTime/>
                 <AccordionTime/>
                 <AccordionTime/>
                 <AccordionTime type="slow"/>

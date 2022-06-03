@@ -2,6 +2,7 @@ import { Container, Grid } from "@mui/material";
 import CardDriver from "./CardDriver/CardDriver";
 import CardTimes from "./CardTimes/CardTimes";
 import CardSector from "./CardSector/CardSector";
+import CardLine from "./CardLine/CardLine";
 
 const DriverDetail = () => {
     return (
@@ -15,6 +16,9 @@ const DriverDetail = () => {
                             </Grid>
                             <Grid item xs={12}>
                                 <CardSector />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <CardLine />
                             </Grid>
                         </Grid>
                     </Grid>

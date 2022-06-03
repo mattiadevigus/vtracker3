@@ -12,15 +12,9 @@
         "link": "/servers"
     },
     {
-        "id": 3,
-        "title": "Drivers",
-        "icon": "fa-users",
-        "link": "/drivers"
-    },
-    {
         "id": 4,
         "title": "About me",
         "icon": "fa-address-card",
-        "link": "/drivers"
+        "link": "/aboutme"
     }
 ]

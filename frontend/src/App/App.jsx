@@ -12,6 +12,7 @@ import HomePage from "../Pages/HomePage/HomePage";
 import Servers from "../Pages/Servers/Servers";
 import ServersDetail from "../Pages/ServerDetail/ServerDetail";
 import DriverDetail from "../Pages/ServerDetail/DriverDetail/DriverDetail";
+import Pricing from "../Pages/Pricing/Pricing";
 
 // Private components
 import BottomNavbar from "../Partials/BottomNavbar/BottomNavbar";
@@ -60,6 +61,7 @@ const App = () => {
               <Route path="/servers" element={<Servers />} />
               <Route path="/servers/:tag" element={<ServersDetail />} />
               <Route path="/servers/:tag/:drivertag" element={<DriverDetail />} />
+              <Route path="/pricing" element={<Pricing />} />
               <Route path="/private/dashboard" element={<Dashboard />} />
             </Routes>
       </CssBaseline>

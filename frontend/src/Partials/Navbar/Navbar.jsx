@@ -4,14 +4,14 @@ import { AppBar, Box, Toolbar, Menu, MenuItem, Typography, Button, Tooltip, Avat
 import MenuIcon from "@mui/icons-material/Menu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faHome, faServer, faUsers, faAddressCard } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faServer, faUsers, faAddressCard, faMoneyCheckDollar } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 import "./Screen.css";
 import pages from "./pages.json";
 
-library.add(faHome, faServer, faUsers, faAddressCard);
+library.add(faHome, faServer, faUsers, faAddressCard, faMoneyCheckDollar);
 
-const settings = ["Admin Area"];
+const settings = ["Login"];
 
 const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);

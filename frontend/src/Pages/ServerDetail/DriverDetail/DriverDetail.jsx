@@ -3,8 +3,13 @@ import CardDriver from "./CardDriver/CardDriver";
 import CardTimes from "./CardTimes/CardTimes";
 import CardSector from "./CardSector/CardSector";
 import CardLine from "./CardLine/CardLine";
+import { useEffect } from "react";
 
 const DriverDetail = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <section>
             <Container>

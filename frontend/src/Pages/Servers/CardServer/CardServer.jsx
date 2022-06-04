@@ -3,7 +3,6 @@ import { Link as RouterLink } from "react-router-dom";
 import { Card, CardHeader, CardContent, CardActions, Grid, Collapse, Typography, Button, IconButton } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import StarHalfIcon from '@mui/icons-material/StarHalf';
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -30,10 +29,10 @@ const CardServer = (props) => {
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
                     <Grid container>
-                        <Grid item xs={4}>
+                        <Grid item xs={4} alignSelf="center">
                             <img style={{ width: "4rem" }} src="/img/tracks/spa.png" alt="SPA" />
                         </Grid>
-                        <Grid item xs={8}>
+                        <Grid item xs={8} alignSelf="center">
                             <Typography>Track: Spa</Typography>
                             <Typography>BestTime: 1:21:293</Typography>
                             <Typography>Driver: 32</Typography>

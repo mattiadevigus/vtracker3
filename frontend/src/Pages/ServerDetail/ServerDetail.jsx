@@ -5,20 +5,25 @@ import CardDetail from "./CardDetail/CardDetail";
 import FormatListNumberedIcon from "@mui/icons-material/FormatListNumbered";
 import AddIcon from "@mui/icons-material/Add";
 import BarChartIcon from "@mui/icons-material/BarChart";
+import { useEffect } from "react";
 
 const ServerDetail = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <section>
             <Container sx={{ marginBottom: "2rem" }}>
                 <Grid container spacing={2}>
                     <Grid item xs={6} md={4}>
-                        <CardDetail />
+                        <CardDetail title="Drivers" value="32"/>
                     </Grid>
                     <Grid item xs={6} md={4}>
-                        <CardDetail />
+                        <CardDetail title="Average Time" value="1:32:345"/>
                     </Grid>
                     <Grid item xs={12} md={4}>
-                        <CardDetail />
+                        <CardDetail title="Type" value="Race"/>
                     </Grid>
                 </Grid>
             </Container>

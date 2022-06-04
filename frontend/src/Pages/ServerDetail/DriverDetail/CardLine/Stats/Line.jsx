@@ -12,7 +12,7 @@ const Stats = () => {
         document.getElementById("chartContainer").innerHTML = "<canvas id='line'></canvas>";
 
         const ctx = document.getElementById("line").getContext("2d");
-        const chart = new Chart(ctx, {
+        new Chart(ctx, {
             type: "line",
             data: {
                 labels: ["S1", "S2", "S3"],

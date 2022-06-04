@@ -8,7 +8,7 @@ import LooksTreeIcon from '@mui/icons-material/Looks3';
  */
 const CardDriver = () => {
 
-    const [gap, setGap] = useState(1234);
+    const [gap] = useState(1234);
 
     return (
         <Card>

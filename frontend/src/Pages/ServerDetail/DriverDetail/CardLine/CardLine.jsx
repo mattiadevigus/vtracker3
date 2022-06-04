@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardContent, Avatar, Grid, Typography } from "@mui/material";
+import { Card, CardHeader, CardContent, Avatar, Grid } from "@mui/material";
 import Line from "./Stats/Line";
 import SportsMotorsportsIcon from '@mui/icons-material/SportsMotorsports';
 

@@ -1,10 +1,16 @@
-import "./Servers.css";
-import { Box, Grid, Container, Card } from "@mui/material";
+import { useEffect } from "react";
+import { Box, Grid, Container } from "@mui/material";
 import Search from "./Search/Search";
 import CardServer from "./CardServer/CardServer";
 import CardEvidenceServer from "./CardEvidenceServer/CardEvidenceServer";
 
+import "./Servers.css";
+
 const Servers = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <section className="servers">
             <Container>

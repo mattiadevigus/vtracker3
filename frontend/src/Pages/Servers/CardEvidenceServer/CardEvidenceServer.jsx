@@ -29,17 +29,17 @@ const CardEvidenceServer = (props) => {
             } />
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
-                    <Grid container textAlign="center">
-                        <Grid item xs={12} md={4}>
-                            <Typography variant="h4">Track: Spa</Typography>
-                            <Typography variant="h4">BestTime: 1:21:293</Typography>
-                            <Typography variant="h4">Driver: 32</Typography>
+                    <Grid container paddingLeft="5rem" paddingRight="5rem">
+                        <Grid item xs={12} md={4} alignSelf="center">
+                            <Typography variant="h5">Track: Spa</Typography>
+                            <Typography variant="h5">BestTime: 1:21:293</Typography>
+                            <Typography variant="h5">Driver: 32</Typography>
                         </Grid>
-                        <Grid item xs={12} md={4}>
+                        <Grid item xs={12} md={4} alignSelf="center" textAlign="center">
                             <Typography variant="h1">R</Typography>
                             <Typography variant="h5" color="secondary">Race</Typography>
                         </Grid>
-                        <Grid item xs={12} md={4}>
+                        <Grid item xs={12} md={4} alignSelf="center" textAlign="right">
                             <img style={{ width: "6rem" }} src="/img/tracks/spa.png" alt="SPA" />
                             <Typography variant="h4">SPA</Typography>
                         </Grid>

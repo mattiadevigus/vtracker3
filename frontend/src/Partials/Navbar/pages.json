@@ -13,8 +13,8 @@
     },
     {
         "id": 4,
-        "title": "About me",
-        "icon": "fa-address-card",
-        "link": "/aboutme"
+        "title": "Pricing",
+        "icon": "fa-money-check-dollar",
+        "link": "/pricing"
     }
 ]

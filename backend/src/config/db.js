@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-const url = "mongodb+srv://MattiVers:07081276Ma@cluster0.tpijffq.mongodb.net/?retryWrites=true&w=majority";
+const url = process.env.CONNECTIONSTRING;
+
+console.log(process.env)
 
 // schema
 const AccTimes = require("../models/acc/AccTimes");

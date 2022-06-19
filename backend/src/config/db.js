@@ -1,13 +1,26 @@
 const mongoose = require('mongoose');
-const url = process.env.CONNECTIONSTRING;
-
-console.log(process.env)
+const url = process.env.MONGOURI;
 
 // schema
+const AccSessions = require("../models/acc/AccSessions");
 const AccTimes = require("../models/acc/AccTimes");
 
-exports.createAccTime = async () => {
-    const client = await mongoose.connect(url, { dbname: "vtracker", useNewUrlParser: true, useUnifiedTopology: true }, () => { console.log("Connected") });
+exports.createAccSession = async () => {
+    mongoose.connect(url, { dbname: "vtracker", useNewUrlParser: true, useUnifiedTopology: true }, () => { console.log("Connected") });
+
+    const res = await AccSessions.create({
+        format: "Q",
+        weather: 1,
+        creationDate: "01/01/2022",
+        trackId: 24,
+        serverId: 2
+    });
+
+    return res._id;
+}
+
+exports.createAccTime = (id) => {
+    mongoose.connect(url, { dbname: "vtracker", useNewUrlParser: true, useUnifiedTopology: true }, () => { console.log("Connected") });
 
     AccTimes.create({
         driverName: "Mattia",
@@ -17,12 +30,9 @@ exports.createAccTime = async () => {
         carId: 23,
         isValid: true,
         sessionId: 2
-    }, (err, res) => {
-        if (err) {
-            console.log(err)
-            return false;
-        };
-
-        return true;
+    }, (err) => {
+        if (err) console.log(err)
+        mongoose.connection.close();
     });
 }
+

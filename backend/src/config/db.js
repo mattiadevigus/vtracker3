@@ -5,22 +5,26 @@ const url = process.env.MONGOURI;
 const AccSessions = require("../models/acc/AccSessions");
 const AccTimes = require("../models/acc/AccTimes");
 
-exports.createAccSession = async () => {
-    mongoose.connect(url, { dbname: "vtracker", useNewUrlParser: true, useUnifiedTopology: true }, () => { console.log("Connected") });
+exports.createAccSession = async () => {    
+    mongoose.connect(url, { dbname: "vtracker", useNewUrlParser: true, useUnifiedTopology: true });
+    try {
+        const res = await AccSessions.create({
+            format: "Q",
+            weather: 1,
+            creationDate: "01/01/2022",
+            trackId: 24,
+            serverId: 2
+        });
 
-    const res = await AccSessions.create({
-        format: "Q",
-        weather: 1,
-        creationDate: "01/01/2022",
-        trackId: 24,
-        serverId: 2
-    });
+        return res._id;
 
-    return res._id;
+    } catch (err) {
+        return false;
+    }
 }
 
 exports.createAccTime = (id) => {
-    mongoose.connect(url, { dbname: "vtracker", useNewUrlParser: true, useUnifiedTopology: true }, () => { console.log("Connected") });
+    mongoose.connect(url, { dbname: "vtracker", useNewUrlParser: true, useUnifiedTopology: true });
 
     AccTimes.create({
         driverName: "Mattia",

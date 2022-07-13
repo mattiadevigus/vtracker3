@@ -2,11 +2,20 @@ const mongoose = require('mongoose');
 const url = process.env.MONGOURI;
 
 // schema
+const User = require("../models/User");
 const AccSessions = require("../models/acc/AccSessions");
 const AccTimes = require("../models/acc/AccTimes");
 
-exports.createAccSession = async () => {    
+const connect = () => {
     mongoose.connect(url, { dbname: "vtracker", useNewUrlParser: true, useUnifiedTopology: true });
+}
+
+exports.checkLogin = (email, password) => {
+    User
+}
+
+exports.createAccSession = async () => {    
+    connect();
     try {
         const res = await AccSessions.create({
             format: "Q",
@@ -24,7 +33,7 @@ exports.createAccSession = async () => {
 }
 
 exports.createAccTime = (id) => {
-    mongoose.connect(url, { dbname: "vtracker", useNewUrlParser: true, useUnifiedTopology: true });
+    connect();
 
     AccTimes.create({
         driverName: "Mattia",

@@ -1,6 +1,10 @@
 // controllers base
-
 const path = require("path");
+
+exports.login = (req, res) => {
+    console.log("Received request!");
+    res.send("Test");
+}
 
 exports.test = (req, res) => {
     res.send("test");

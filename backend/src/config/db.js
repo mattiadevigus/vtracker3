@@ -10,11 +10,11 @@ const connect = () => {
     mongoose.connect(url, { dbname: "vtracker", useNewUrlParser: true, useUnifiedTopology: true });
 }
 
-exports.checkLogin = (email, password) => {
-    User
+exports.checkLogin = (data) => {
+    const user = User.find({ email: data.email, password: data.password });
 }
 
-exports.createAccSession = async () => {    
+exports.createAccSession = async () => {
     connect();
     try {
         const res = await AccSessions.create({

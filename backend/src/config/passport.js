@@ -1,8 +1,7 @@
 const User = require("../models/User");
 const passport = require("passport");
-const localStategy = require("passport-local").Strategy;
+const localStrategy = require("passport-local").Strategy;
 const bcrypt = require("bcryptjs");
-
 
 passport.use(new localStrategy((username, password, done) => {
     User.findOne({ username: username }, (err, user) => {
@@ -28,3 +27,5 @@ passport.deserializeUser((id, cb) => {
         cb(err, user);
     });
 });
+
+module.exports = passport;

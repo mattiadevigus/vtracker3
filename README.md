@@ -2,10 +2,20 @@
 The Assetto Corsa metaverse tracker ♾️
 
 # Dev Scripts
-* npm run first-start: install all packages to run the webapp (Run this only the first time)
-* npm run frontend: start frontend server
-* npm run backend: start backend server
-* npm run dev-update: start backend app with update of build folder (nodemon)
+Install all packages to run the webapp (Run this only the first time):
+
+    npm run first-start 
+Start frontend server:
+
+    npm run frontend
+    
+Start backend server:
+
+    npm run backend
+    
+Start backend app with update of build folder (nodemon):
+    
+    npm run dev-update
 
 # Explanation of the structure (backend)
 * .env: environment variables\

@@ -1,13 +1,15 @@
 const express = require("express");
 const session = require("express-session");
 const cors = require("cors");
+const controller = require("./controllers/controller");
 const passport = require("passport");
 const passportLocal = require("passport-local").Strategy;
 const configPassport = require("./config/passport");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 const db = require("./config/db");
-const vtRoutes = require("./routes/router");
+const routes = require("./routes/router");
+const tasks = require("./tasks/start");
 
 const app = express();
 
@@ -24,8 +26,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(express.static(path.join(__dirname, "../build")));
-db.createAccSession()
-    .then(res => console.log(res));
-app.use("/", vtRoutes);
+
+//tasks
+tasks.startOperation();
 
 module.exports = app;

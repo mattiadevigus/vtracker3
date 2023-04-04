@@ -10,17 +10,17 @@ exports.mainOperation = async (path) => {
 
     let index = 0;
     for (let session of files) {
-        let idSession = db.createSession(results.getServerName(session), results.getTrackName(session), results.getWeather(session), results.getSessionType(session), filesDate[index]);
-       /*  let leaderboards = results.getFullLeaderBoard(session);
+        const idSession = db.createSession(results.getServerName(session), results.getTrackName(session), results.getWeather(session), results.getSessionType(session), filesDate[index]);
+        const leaderboards = results.getFullLeaderBoard(session);
 
         for (let driver of leaderboards) {
             let times = results.getAllLapsFromDriver(session, driver.car["carId"]);
             for (let time of times) {
-                database.insertTime((driver.currentDriver["firstName"] + " " + driver.currentDriver["lastName"]), driver.car["carModel"], time, idSession);
+                db.insertTime((driver.currentDriver["firstName"] + " " + driver.currentDriver["lastName"]), driver.car["carModel"], time.splits, idSession, time.isValidForBest == true ? -1 : 0);
             }
         }
 
-        index++; */
+        index++;
     }
 }
 

@@ -41,6 +41,10 @@ a {
   border: none;
 }
 
+svg {
+  vertical-align: middle;
+}
+
 .logo-1 {
   width: 2rem;
   margin: 1rem;
@@ -120,7 +124,7 @@ a {
 }
 
 .red-time {
-  color: #7a1212;
+  color: #9e1616;
 }
 
 @keyframes slide {

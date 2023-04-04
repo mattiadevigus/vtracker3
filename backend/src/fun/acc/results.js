@@ -17,3 +17,5 @@ exports.getBestLap = (arr) => {
 exports.getWeather = (arr) => {
     return arr["sessionResult"].isWetSession;
 }
+
+exports.getCatego

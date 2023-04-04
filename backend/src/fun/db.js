@@ -18,7 +18,7 @@ exports.createSession = (server, track, weatherValue, sessionType, dataCreation)
     const db = new sqlite(pathDb);
     const serverId = getServerId(server);
     
-    /*     track = results.fixTrackYear(track);
+    /* track = results.fixTrackYear(track);
     
         let stmt = db.prepare(`INSERT OR IGNORE INTO Sessions VALUES(NULL, ?, ?, ?, ?, ?)`);
         stmt.run(server, track, weatherValue, sessionType, dataCreation.toString());

@@ -22,20 +22,20 @@ const CardServer = (props) => {
     }
 
     return (
-        <Card>
-            <CardHeader title="Server di Test" className="remove-subheader" subheader="#8666" action={
-                <Typography variant="h5" color="secondary">Q</Typography>
+        <Card style={{display: 'flex', width: '100%', justifyContent: 'space-between', flexDirection: 'column'}}>
+            <CardHeader title={props.title} className="remove-subheader" subheader={props.tag} action={
+                <Typography variant="h5" color="secondary">{/* Q */}</Typography>
             } />
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
                     <Grid container>
                         <Grid item xs={4} alignSelf="center">
-                            <img style={{ width: "4rem" }} src="/img/tracks/spa.png" alt="SPA" />
+                            <img style={{ width: "4rem" }} src={props.img} alt={props.track} />
                         </Grid>
                         <Grid item xs={8} alignSelf="center">
-                            <Typography>Track: Spa</Typography>
-                            <Typography>BestTime: 1:21:293</Typography>
-                            <Typography>Driver: 32</Typography>
+                            <Typography>Track: {props.track}</Typography>
+                            <Typography>BestTime: {props.time}</Typography>
+                            <Typography>Driver: {props.driver}</Typography>
                         </Grid>
                     </Grid>
                 </CardContent>

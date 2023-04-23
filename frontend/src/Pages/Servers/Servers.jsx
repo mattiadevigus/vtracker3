@@ -1,61 +1,41 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from 'axios';
 import { Box, Grid, Container } from "@mui/material";
 import Search from "./Search/Search";
 import CardServer from "./CardServer/CardServer";
-import CardEvidenceServer from "./CardEvidenceServer/CardEvidenceServer";
+/* import CardEvidenceServer from "./CardEvidenceServer/CardEvidenceServer"; */
 
 import "./Servers.css";
 
 const Servers = () => {
+    const [rows, setRows] = useState([]);
+
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, []);
+        // Get all servers
+        axios.get("http://localhost:9000/servers")
+            .then(res => {
+                const servers = res.data;
+                let temp = [];
+                for (let server of servers) {
+                    temp.push({ id: server, name: server.name });
+                }
+
+                setRows(temp);
+            });
+    }, [])// eslint-disable-line react-hooks/exhaustive-deps
 
     return (
-        <section className="servers">
+        <section id="servers">
             <Container>
                 <Search />
                 <Box>
-                    <Grid container spacing={{ xs: 0, md: 1 }}>
-                        <Grid item xs={12} md={12}>
-                            <CardEvidenceServer />
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <CardServer pro={true} />
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <CardServer />
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <CardServer />
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <CardServer />
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <CardServer />
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <CardServer pro="Pro" />
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <CardServer />
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <CardServer />
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <CardServer />
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <CardServer />
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <CardServer pro="Pro" />
-                        </Grid>
-                        <Grid item xs={12} md={4}>
-                            <CardServer pro="Pro" />
-                        </Grid>
+                    <Grid container alignItems="stretch" spacing={{ xs: 0, md: 1 }}>
+                        {rows.map(row => (
+                            <Grid item xs={12} md={4} style={{display: 'flex'}}>
+                                <CardServer title={row.name} />
+                            </Grid>
+                        ))}
                     </Grid>
                 </Box>
             </Container>

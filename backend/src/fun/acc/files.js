@@ -47,12 +47,6 @@ readDirectoryFiles = async (filespath) => {
     return arr;
 }
 
-readFile = (file) => {
-    fs.readFile(file, (err, data) => {
-
-    })
-}
-
 getFilesDataCreation = async(filespath) => {
     let dates = [];
     if (fs.existsSync(filespath)) {

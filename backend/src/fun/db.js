@@ -67,3 +67,10 @@ getIdByName = (tableName, columnName, fieldValue, fieldCondition = "name") => {
     db.close();
     return id;
 }
+
+exports.run = ($query, $values) => {
+    const db = new sqlite(pathDb);
+    const stmt = db.prepare($query);
+    const res = stmt.all($values)
+    return res;
+}

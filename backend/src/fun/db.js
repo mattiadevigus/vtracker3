@@ -18,6 +18,7 @@ exports.createSession = (serverName, trackName, weatherValue, sessionType, dataC
     const db = new sqlite(pathDb);
     const serverId = getIdByName("Servers", "serverId", serverName);
     const trackId = getIdByName("Tracks", "trackId", trackName);
+    this.checkTracks();
     const sessionTypeId = getIdByName("SessionTypes", "sessionTypeId", sessionType);
 
     let stmt = db.prepare(`INSERT OR IGNORE INTO Sessions VALUES(NULL, ?, ?, ?, ?, ?)`);
@@ -39,6 +40,13 @@ exports.insertTime = (driverName, carModel, time, lastId, isValid) => {
 
     db.close();
 };
+
+exports.checkTracks = () => {
+    // need to autodownload the image
+    const db = new sqlite(pathDb);
+
+    let stmt = db.prepare(`UPDATE Tracks SET fullName = UPPER(SUBSTR(name, 1, 1)) || SUBSTR(REPLACE(name, "_", " "), 2)`)
+}
 
 /* 
     return Id value from table based by column name

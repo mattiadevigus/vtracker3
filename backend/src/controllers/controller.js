@@ -24,19 +24,13 @@ exports.all = (req, res) => {
 }
 
 exports.getAllServers = (req, res) => {
-    const servers = db.run("SELECT * FROM Servers", []);
+    const servers = db.run("SELECT Servers.serverId, Servers.name as serverName, Sessions.sessionId, Tracks.trackId, Tracks.fullName as trackName, Tracks.image, count(DISTINCT Times.driverName) as driversCount FROM Servers LEFT JOIN Sessions ON Servers.serverId=Sessions.serverId LEFT JOIN Tracks ON Sessions.trackId = Tracks.trackId LEFT JOIN Times ON Times.sessionId = Sessions.sessionId GROUP BY Sessions.trackId, Servers.name", []);
     const serversObj = [];
     servers.forEach(server => {
-        const serverId = server.serverId;
-        const serverName = server.name;
-
-        const serverObj = {
-            id: server.serverId,
-            name: server.name
-        }
-
         serversObj.push(server);
     });
+
+    const times = 
 
     res.send(serversObj);
 }

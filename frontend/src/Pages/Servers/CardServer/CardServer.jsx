@@ -23,19 +23,19 @@ const CardServer = (props) => {
 
     return (
         <Card style={{display: 'flex', width: '100%', justifyContent: 'space-between', flexDirection: 'column'}}>
-            <CardHeader title={props.title} className="remove-subheader" subheader={props.tag} action={
-                <Typography variant="h5" color="secondary">{/* Q */}</Typography>
+            <CardHeader title={props.title} className="remove-subheader" subheader={"#" + props.tag} action={
+                <Typography variant="h5" color="secondary">{props.sessionType}</Typography>
             } />
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
                     <Grid container>
                         <Grid item xs={4} alignSelf="center">
-                            <img style={{ width: "4rem" }} src={props.img} alt={props.track} />
+                            <img style={{ width: "4rem" }} src={props.image} alt={props.track} />
                         </Grid>
                         <Grid item xs={8} alignSelf="center">
-                            <Typography>Track: {props.track}</Typography>
+                            <Typography>Track: {props.trackName}</Typography>
                             <Typography>BestTime: {props.time}</Typography>
-                            <Typography>Driver: {props.driver}</Typography>
+                            <Typography>Driver: {props.driversCount}</Typography>
                         </Grid>
                     </Grid>
                 </CardContent>

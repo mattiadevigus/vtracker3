@@ -10,7 +10,7 @@ const HomePage = () => {
             <div className="background-animation"></div>
             <div className="background-animation bg2"></div>
             <div className="background-animation bg3"></div>
-            <section className="homepage">
+            <section id="homepage">
                 <img className="logo-2" src="/img/vt_logo.png" alt="vt_logo" />
                 <Typography variant="span"></Typography>
                 <Button component={RouterLink} variant="contained" size="large" to="/servers">

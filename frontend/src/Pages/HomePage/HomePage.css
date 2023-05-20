@@ -1,4 +1,4 @@
-.homepage {
+#homepage {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -8,7 +8,7 @@
   justify-content: center;
 }
 
-.homepage a {
+#homepage a {
   position: absolute;
   margin: 0 auto;
   bottom: 2rem;

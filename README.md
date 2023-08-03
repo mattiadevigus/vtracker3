@@ -1,4 +1,4 @@
-# Vtracker3 (WIP)
+# Vtracker3 (EoD)
 The Assetto Corsa metaverse tracker ♾️
 
 # Dev Scripts

@@ -35,12 +35,13 @@ const Servers = () => {
                         {rows.map(row => (
                             <Grid item xs={12} md={4} style={{display: 'flex'}}>
                                 <CardServer 
-                                    title={row.serverName} 
-                                    tag={row.serverId} 
-                                    sessionType={row.sessionType}
-                                    trackName={row.trackName}
-                                    image={row.image}
-                                    driversCount={row.driversCount}
+                                    title={row.server.serverName} 
+                                    tag={row.server.serverId} 
+                                    sessionType={row.server.sessionType}
+                                    trackName={row.server.trackName}
+                                    image={row.server.image}
+                                    driversCount={row.server.driversCount}
+                                    bestTime={row.bestTime.totalTime}
                                 />
                             </Grid>
                         ))}

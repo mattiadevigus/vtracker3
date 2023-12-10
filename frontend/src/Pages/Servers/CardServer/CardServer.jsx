@@ -30,12 +30,12 @@ const CardServer = (props) => {
                 <CardContent>
                     <Grid container>
                         <Grid item xs={4} alignSelf="center">
-                            <img style={{ width: "4rem" }} src={props.image} alt={props.track} />
+                            <img style={{ width: "4rem" }} src={props.image} alt="BETA" />
                         </Grid>
                         <Grid item xs={8} alignSelf="center">
                             <Typography>Track: {props.trackName}</Typography>
                             <Typography>BestTime: {props.time}</Typography>
-                            <Typography>Driver: {props.driversCount}</Typography>
+                            <Typography>Drivers: {props.driversCount}</Typography>
                         </Grid>
                     </Grid>
                 </CardContent>
